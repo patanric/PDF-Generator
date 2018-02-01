@@ -1,0 +1,57 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.CheckBox?>
+
+<GridPane
+  xmlns:fx="http://javafx.com/fxml"
+  styleClass="root"
+  fx:controller="sample.Controller">
+
+  <padding>
+    <Insets bottom="10" left="25" right="25" top="25"/>
+  </padding>
+
+  <Text GridPane.columnIndex="1"
+    GridPane.rowIndex="0"
+    text="Convert your TXT to PDF"
+    fx:id="title"/>
+
+  <Label GridPane.columnIndex="0"
+    GridPane.rowIndex="1" text="Source File:"/>
+
+  <TextField GridPane.columnIndex="1"
+    GridPane.rowIndex="1" fx:id="sourceFileTarget"/>
+
+  <Button GridPane.columnIndex="2"
+    GridPane.rowIndex="1"
+    onAction="#handleFindButtonAction" text="Find file"/>
+
+  <Label GridPane.columnIndex="0"
+    GridPane.rowIndex="2" text="Destination:"/>
+
+  <TextField GridPane.columnIndex="1"
+    GridPane.rowIndex="2" fx:id="destTarget"/>
+
+  <Button GridPane.columnIndex="2"
+    GridPane.rowIndex="2"
+    onAction="#chooseButtonAction" text="Choose destination"/>
+
+  <Button GridPane.columnIndex="1"
+    GridPane.rowIndex="4"
+    onAction="#handleConvertButtonAction" text="Convert now"/>
+
+  <CheckBox GridPane.columnIndex="1" GridPane.rowIndex="3"
+    text="Open PDF file after creation"
+    fx:id="checkBox"/>
+
+  <stylesheets>
+    <URL value="@main_window.css"/>
+  </stylesheets>
+
+</GridPane>
